@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Augustinas.K</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/7162abd30e.js"></script>
+	<script>
+		window.onload = function () {
+			var plus1 = document.getElementById("plus1");
+			plus1.addEventListener("click", function () {
+				document.getElementById("box1").style.setProperty('display', 'block');
+				document.getElementById("box11").style.setProperty('display', 'none');
+				var x1 = document.getElementById("x1");
+				x1.addEventListener("click", function () {
+					document.getElementById("box1").style.setProperty('display', 'none');
+					document.getElementById("box11").style.setProperty('display', 'block');
+				});
+			});
+			var plus2 = document.getElementById("plus2");
+			plus2.addEventListener("click", function () {
+				document.getElementById("box2").style.setProperty('display', 'block');
+				document.getElementById("box22").style.setProperty('display', 'none');
+				var x2 = document.getElementById("x2");
+				x2.addEventListener("click", function () {
+					document.getElementById("box2").style.setProperty('display', 'none');
+					document.getElementById("box22").style.setProperty('display', 'block');
+				});
+			});
+			var plus3 = document.getElementById("plus3");
+			plus3.addEventListener("click", function () {
+				document.getElementById("box3").style.setProperty('display', 'block');
+				document.getElementById("box33").style.setProperty('display', 'none');
+				var x3 = document.getElementById("x3");
+				x3.addEventListener("click", function () {
+					document.getElementById("box3").style.setProperty('display', 'none');
+					document.getElementById("box33").style.setProperty('display', 'block');
+				});
+			});
+		}
+	</script>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<h1 class="navbar-brand">Augustinas Kazokas</h1>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="#">
+						<h4>Web</h4>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./index2.html">
+						<h4>Mobile</h4>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div id="main">
+		<div id="grid-con">
+
+			<div id="box11" class="display-box">
+				<img class="display-img" src="./images/01.png" />
+				<h3 class="centered">Python(Django)</h3>
+				<h3 class="centered-2">SQL(Postgres/SQLite)</h3>
+				<h3 class="centered-3">HTML/CSS(Jinja, Bootsrap)</h3>
+				<a id="plus1"><img class="plus" src="./images/icons/plus_icon.png"></a>
+			</div>
+			<div id="box1" class="display-box2">
+				<img class="display-img" src="./images/01.png" />
+				<button onclick="window.open('https://pizza-django.herokuapp.com/')" class="button1 source">Live
+					Demo</button>
+				<button onclick="window.open('https://github.com/AugustinasKaz/pizza-django')"
+					class="button1 demo">Source code</button>
+				<a id="x1"><img class="plus" src="./images/icons/minus_icon.png"></a>
+			</div>
+
+
+			<div id="box22" class="display-box">
+				<img class="display-img" src="./images/02.png" />
+				<h3 class="centered">Node.js(Express)</h3>
+				<h3 class="centered-2">JavaScript(React)</h3>
+				<h3 class="centered-3">SQL(Postgres)</h3>
+				<h3 class="centered-4">HTML/CSS</h3>
+				<a id="plus2"><img class="plus" src="./images/icons/plus_icon.png"></a>
+			</div>
+			<div id="box2" class="display-box2">
+				<img class="display-img" src="./images/02.png" />
+				<button onclick="window.open('https://cats-app-node.herokuapp.com/')" class="button1 source">Live
+					Demo</button>
+				<button onclick="window.open('https://github.com/AugustinasKaz/cats-app')" class="button1 demo">Source code</button>
+				<a id="x2"><img class="plus" src="./images/icons/minus_icon.png"></a>
+			</div>
+
+			
+			<div id="box33" class="display-box">
+				<img class="display-img" src="./images/03.png" />
+				<h3 class="centered">Python(Flask)</h3>
+				<h3 class="centered-2">JavaScript(Jquery)</h3>
+				<h3 class="centered-3">HTML/CSS(SASS)</h3>
+				<a id="plus3"><img class="plus" src="./images/icons/plus_icon.png"></a>
+			</div>
+			<div id="box3" class="display-box2">
+				<img class="display-img" src="./images/03.png" />
+				<button onclick="window.open('#')" class="button1 source">Fixing Bugs</button>
+				<button onclick="window.open('https://github.com/AugustinasKaz/flask-chat')" class="button1 demo">Source code</button>
+				<a id="x3"><img class="plus" src="./images/icons/minus_icon.png"></a>
+			</div>
+
+
+			<div id="box44" class="display-box">
+				<img class="display-img" src="./images/04.png" />
+				<h3 class="centered">Python(Flask)</h3>
+				<h3 class="centered-2">JavaScript(Jquery)</h3>
+				<h3 class="centered-3">HTML/CSS(SASS)</h3>
+				<a id="plus4"><img class="plus" src="./images/icons/plus_icon.png"></a>
+			</div>
+			<div id="box4" class="display-box2">
+				<img class="display-img" src="./images/04.png" />
+				<button onclick="window.open('https://github.com/AugustinasKaz/flask-chat')" class="button1 demo">Source code</button>
+				<a id="x4"><img class="plus" src="./images/icons/minus_icon.png"></a>
+			</div>
+
+
+			<div id="box55" class="display-box">
+				<img class="display-img" src="./images/05.png" />
+				<h3 class="centered">Python(Djagno)</h3>
+				<h3 class="centered-2">JavaScript(React)</h3>
+				<h3 class="centered-3">HTML/CSS</h3>
+				<a id="plus5"><img class="plus" src="./images/icons/plus_icon.png"></a>
+			</div>
+			<div id="box5" class="display-box2">
+				<img class="display-img" src="./images/06.png" />
+				<button onclick="window.open('https://github.com/AugustinasKaz/flask-chat')" class="button1 demo">Source code</button>
+				<a id="x5"><img class="plus" src="./images/icons/minus_icon.png"></a>
+			</div>
+
+			
+
+		</div>
+
+
+	</div>
+</body>
+
+</html>
