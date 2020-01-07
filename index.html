@@ -50,6 +50,26 @@
 					document.getElementById("box33").style.setProperty('display', 'block');
 				});
 			});
+			var plus4 = document.getElementById("plus4");
+			plus4.addEventListener("click", function () {
+				document.getElementById("box4").style.setProperty('display', 'block');
+				document.getElementById("box44").style.setProperty('display', 'none');
+				var x4 = document.getElementById("x4");
+				x4.addEventListener("click", function () {
+					document.getElementById("box4").style.setProperty('display', 'none');
+					document.getElementById("box44").style.setProperty('display', 'block');
+				});
+			});
+			var plus5 = document.getElementById("plus5");
+			plus5.addEventListener("click", function () {
+				document.getElementById("box5").style.setProperty('display', 'block');
+				document.getElementById("box55").style.setProperty('display', 'none');
+				var x5 = document.getElementById("x5");
+				x5.addEventListener("click", function () {
+					document.getElementById("box5").style.setProperty('display', 'none');
+					document.getElementById("box55").style.setProperty('display', 'block');
+				});
+			});
 		}
 	</script>
 
@@ -131,14 +151,14 @@
 
 			<div id="box44" class="display-box">
 				<img class="display-img" src="./images/04.png" />
-				<h3 class="centered">Python(Flask)</h3>
-				<h3 class="centered-2">JavaScript(Jquery)</h3>
-				<h3 class="centered-3">HTML/CSS(SASS)</h3>
+				<h3 class="centered">Python(Django)</h3>
+				<h3 class="centered-2">JavaScript(React)</h3>
+				<h3 class="centered-3">HTML/CSS(Bootstrap)</h3>
 				<a id="plus4"><img class="plus" src="./images/icons/plus_icon.png"></a>
 			</div>
 			<div id="box4" class="display-box2">
 				<img class="display-img" src="./images/04.png" />
-				<button onclick="window.open('https://github.com/AugustinasKaz/flask-chat')" class="button1 demo">Source code</button>
+				<button onclick="window.open('https://github.com/AugustinasKaz/Projects/tree/master/reddit')" class="button1 demo">Source code</button>
 				<a id="x4"><img class="plus" src="./images/icons/minus_icon.png"></a>
 			</div>
 
@@ -147,12 +167,12 @@
 				<img class="display-img" src="./images/05.png" />
 				<h3 class="centered">Python(Djagno)</h3>
 				<h3 class="centered-2">JavaScript(React)</h3>
-				<h3 class="centered-3">HTML/CSS</h3>
+				<h3 class="centered-3">HTML/CSS(Bootstrap)</h3>
 				<a id="plus5"><img class="plus" src="./images/icons/plus_icon.png"></a>
 			</div>
 			<div id="box5" class="display-box2">
-				<img class="display-img" src="./images/06.png" />
-				<button onclick="window.open('https://github.com/AugustinasKaz/flask-chat')" class="button1 demo">Source code</button>
+				<img class="display-img" src="./images/05.png" />
+				<button onclick="window.open('https://github.com/AugustinasKaz/Projects/tree/master/project4')" class="button1 demo">Source code</button>
 				<a id="x5"><img class="plus" src="./images/icons/minus_icon.png"></a>
 			</div>
 
