@@ -20,56 +20,38 @@
 	<script src="https://use.fontawesome.com/7162abd30e.js"></script>
 	<script>
 		window.onload = function () {
-			var plus1 = document.getElementById("plus1");
-			plus1.addEventListener("click", function () {
-				document.getElementById("box1").style.setProperty('display', 'block');
-				document.getElementById("box11").style.setProperty('display', 'none');
-				var x1 = document.getElementById("x1");
-				x1.addEventListener("click", function () {
-					document.getElementById("box1").style.setProperty('display', 'none');
-					document.getElementById("box11").style.setProperty('display', 'block');
+			const displayBoxes = document.getElementsByClassName("display-box");
+			for (var i = 0; i < displayBoxes.length; i++) {
+				displayBoxes[i].addEventListener('click', function () {
+					var id = this.getAttribute("id");
+					var plus = document.getElementById('plus' + id.slice(3, 4));
+					var minus = document.getElementById(id.slice(2, 4));
+					var question = document.getElementById('ques' + id.slice(3, 4));
+					var minus2 = document.getElementById(id.slice(2, 5));
+			
+					
+					minus.addEventListener("click", function () {
+						document.getElementById(id.slice(0, -1)).style.setProperty('display', 'none');
+						document.getElementById(id).style.setProperty('display', 'block');
+					});
+
+					minus2.addEventListener("click", function () {
+						document.getElementById(id.slice(0, 4)).style.setProperty('display', 'none');
+						document.getElementById(id).style.setProperty('display', 'block');
+					});
+
+					plus.addEventListener("click", function () {
+						document.getElementById(id.slice(0, -1)).style.setProperty('display', 'block');
+						document.getElementById(id).style.setProperty('display', 'none');
+					});
+
+					question.addEventListener("click", function () {
+						document.getElementById(id.slice(0, -2)).style.setProperty('display', 'block');
+						document.getElementById(id).style.setProperty('display', 'none');
+					});
+
 				});
-			});
-			var plus2 = document.getElementById("plus2");
-			plus2.addEventListener("click", function () {
-				document.getElementById("box2").style.setProperty('display', 'block');
-				document.getElementById("box22").style.setProperty('display', 'none');
-				var x2 = document.getElementById("x2");
-				x2.addEventListener("click", function () {
-					document.getElementById("box2").style.setProperty('display', 'none');
-					document.getElementById("box22").style.setProperty('display', 'block');
-				});
-			});
-			var plus3 = document.getElementById("plus3");
-			plus3.addEventListener("click", function () {
-				document.getElementById("box3").style.setProperty('display', 'block');
-				document.getElementById("box33").style.setProperty('display', 'none');
-				var x3 = document.getElementById("x3");
-				x3.addEventListener("click", function () {
-					document.getElementById("box3").style.setProperty('display', 'none');
-					document.getElementById("box33").style.setProperty('display', 'block');
-				});
-			});
-			var plus4 = document.getElementById("plus4");
-			plus4.addEventListener("click", function () {
-				document.getElementById("box4").style.setProperty('display', 'block');
-				document.getElementById("box44").style.setProperty('display', 'none');
-				var x4 = document.getElementById("x4");
-				x4.addEventListener("click", function () {
-					document.getElementById("box4").style.setProperty('display', 'none');
-					document.getElementById("box44").style.setProperty('display', 'block');
-				});
-			});
-			var plus5 = document.getElementById("plus5");
-			plus5.addEventListener("click", function () {
-				document.getElementById("box5").style.setProperty('display', 'block');
-				document.getElementById("box55").style.setProperty('display', 'none');
-				var x5 = document.getElementById("x5");
-				x5.addEventListener("click", function () {
-					document.getElementById("box5").style.setProperty('display', 'none');
-					document.getElementById("box55").style.setProperty('display', 'block');
-				});
-			});
+			}
 		}
 	</script>
 
@@ -98,16 +80,18 @@
 		</div>
 	</nav>
 	<div id="main">
+		<h1>All live demos are hosted on Heroku using AWS(first load may take a while)</h1>
 		<div id="grid-con">
 
-			<div id="box11" class="display-box">
+			<div id="box111" class="display-box">
 				<img class="display-img" src="./images/01.png" />
 				<h3 class="centered">Python(Django)</h3>
 				<h3 class="centered-2">SQL(Postgres/SQLite)</h3>
 				<h3 class="centered-3">HTML/CSS(Jinja, Bootsrap)</h3>
 				<a id="plus1"><img class="plus" src="./images/icons/plus_icon.png"></a>
+				<a id="ques1"><img class="question" src="./images/icons/question.png"></a>
 			</div>
-			<div id="box1" class="display-box2">
+			<div id="box11" class="display-box2">
 				<img class="display-img" src="./images/01.png" />
 				<button onclick="window.open('https://pizza-django.herokuapp.com/')" class="button1 source">Live
 					Demo</button>
@@ -115,72 +99,93 @@
 					class="button1 demo">Source code</button>
 				<a id="x1"><img class="plus" src="./images/icons/minus_icon.png"></a>
 			</div>
+			<div id="box1" class="display-box2">
+				<h3>Application for handling a pizza restaurant’s online orders. Users are able to browse the restaurant’s menu,
+					add items to their cart, and submit their orders. The restaurant
+					owners are able to add and update menu items, and view orders that have been placed.</h3>
+				<a id="x11"><img class="plus" src="./images/icons/minus_icon.png"></a>
+			</div>
 
 
-			<div id="box22" class="display-box">
-				<img class="display-img" src="./images/02.png" />
+			<div id="box222" class="display-box">
+				<img class="display-img" src="./images/02.png"/>
 				<h3 class="centered">Node.js(Express)</h3>
 				<h3 class="centered-2">JavaScript(React)</h3>
 				<h3 class="centered-3">SQL(Postgres)</h3>
 				<h3 class="centered-4">HTML/CSS</h3>
 				<a id="plus2"><img class="plus" src="./images/icons/plus_icon.png"></a>
+				<a id="ques2"><img class="question" src="./images/icons/question.png"></a>
 			</div>
-			<div id="box2" class="display-box2">
+			<div id="box22" class="display-box2">
 				<img class="display-img" src="./images/02.png" />
 				<button onclick="window.open('https://cats-app-node.herokuapp.com/')" class="button1 source">Live
 					Demo</button>
-				<button onclick="window.open('https://github.com/AugustinasKaz/cats-app')" class="button1 demo">Source code</button>
+				<button onclick="window.open('https://github.com/AugustinasKaz/cats-app')" class="button1 demo">Source
+					code</button>
 				<a id="x2"><img class="plus" src="./images/icons/minus_icon.png"></a>
 			</div>
+			<div id="box2" class="display-box2">
+				<h5>TheCatAPI |  Material-UI</h5></br>
+				<h3>Application displays random cats pictures from API. Users can leave comments that will be saved in database</h3>
+				<a id="x22"><img class="plus" src="./images/icons/minus_icon.png"></a>
+			</div>
+
+
+			<div id="box444" class="display-box">
+				<img class="display-img" src="./images/04.png" />
+				<h3 class="centered">Node.js(Express)</h3>
+				<h3 class="centered-2">JavaScript(React)</h3>
+				<h3 class="centered-3">HTML/CSS(SASS)</h3>
+				<h3 class="centered-4">GraphQL</h3>
+				<h3 class="centered-5">SQL(Postgres)</h3>
+				<a id="plus4"><img class="plus" src="./images/icons/plus_icon.png"></a>
+				<a id="ques4"><img class="question" src="./images/icons/question.png"></a>
+			</div>
+			<div id="box44" class="display-box2">
+				<img class="display-img" src="./images/04.png" />
+				<button onclick="window.open('https://map-app3.herokuapp.com/')" class="button1 source">Live demo</button>
+				<button onclick="window.open('https://github.com/AugustinasKaz/map-app')" class="button1 demo">Source
+					code</button>
+				<a id="x4"><img class="plus" src="./images/icons/minus_icon.png"></a>
+			</div>
+			<div id="box4" class="display-box2">
+				<h5>Mapbox API | Google news API | Hasura GraphQl engine | Material-UI</h5></br>
+				<h3>Application displays world map with marked cities. On marker click event it will display a popup with article links. Users can also create local user and add favorite cities to database or search for specific city</h3>
+				<a id="x44"><img class="plus" src="./images/icons/minus_icon.png"></a>
+			</div>
+
 
 			
-			<div id="box33" class="display-box">
+			<div id="box333" class="display-box">
 				<img class="display-img" src="./images/03.png" />
 				<h3 class="centered">Python(Flask)</h3>
 				<h3 class="centered-2">JavaScript(Jquery)</h3>
 				<h3 class="centered-3">HTML/CSS(SASS)</h3>
 				<a id="plus3"><img class="plus" src="./images/icons/plus_icon.png"></a>
 			</div>
-			<div id="box3" class="display-box2">
+			<div id="box33" class="display-box2">
 				<img class="display-img" src="./images/03.png" />
 				<button onclick="window.open('#')" class="button1 source">Fixing Bugs</button>
-				<button onclick="window.open('https://github.com/AugustinasKaz/flask-chat')" class="button1 demo">Source code</button>
+				<button onclick="window.open('https://github.com/AugustinasKaz/flask-chat')" class="button1 demo">Source
+					code</button>
 				<a id="x3"><img class="plus" src="./images/icons/minus_icon.png"></a>
 			</div>
-
-
-			<div id="box44" class="display-box">
-				<img class="display-img" src="./images/04.png" />
-				<h3 class="centered">Python(Django)</h3>
-				<h3 class="centered-2">JavaScript(React)</h3>
-				<h3 class="centered-3">HTML/CSS(Bootstrap)</h3>
-				<a id="plus4"><img class="plus" src="./images/icons/plus_icon.png"></a>
-			</div>
-			<div id="box4" class="display-box2">
-				<img class="display-img" src="./images/04.png" />
-				<button onclick="window.open('https://github.com/AugustinasKaz/Projects/tree/master/reddit')" class="button1 demo">Source code</button>
-				<a id="x4"><img class="plus" src="./images/icons/minus_icon.png"></a>
-			</div>
-
-
-			<div id="box55" class="display-box">
+			
+			<div id="box555" class="display-box">
 				<img class="display-img" src="./images/05.png" />
-				<h3 class="centered">Python(Djagno)</h3>
+				<h3 class="centered">Python(Django)</h3>
 				<h3 class="centered-2">JavaScript(React)</h3>
 				<h3 class="centered-3">HTML/CSS(Bootstrap)</h3>
 				<a id="plus5"><img class="plus" src="./images/icons/plus_icon.png"></a>
 			</div>
 			<div id="box5" class="display-box2">
 				<img class="display-img" src="./images/05.png" />
-				<button onclick="window.open('https://github.com/AugustinasKaz/Projects/tree/master/project4')" class="button1 demo">Source code</button>
+				<button onclick="window.open('https://github.com/AugustinasKaz/Projects/tree/master/reddit')"
+					class="button1 demo">Source code</button>
 				<a id="x5"><img class="plus" src="./images/icons/minus_icon.png"></a>
 			</div>
 
-			
-
 		</div>
-
-
 	</div>
 </body>
 
